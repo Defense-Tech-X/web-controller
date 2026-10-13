@@ -59,5 +59,5 @@ export function attachStick(zone) {
   zone.addEventListener("pointercancel", release);
   window.addEventListener("resize", renderKnob);
 
-  renderKnob();
+  updatePosition(position);
 }

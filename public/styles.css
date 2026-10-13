@@ -134,18 +134,34 @@ body {
   cursor: pointer;
 }
 
-.screen-info {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 0.15rem 0.6rem;
+.connection-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin: 0;
   font-size: 0.75rem;
   color: var(--muted-color);
 }
 
-.screen-info dd {
-  margin: 0;
-  color: var(--text-color);
+.connection-indicator::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--status-color, var(--muted-color));
+  box-shadow: 0 0 6px var(--status-color, transparent);
+}
+
+.connection-indicator[data-status="connecting"] {
+  --status-color: #e0a526;
+}
+
+.connection-indicator[data-status="online"] {
+  --status-color: #3ccf6e;
+}
+
+.connection-indicator[data-status="offline"] {
+  --status-color: #e5484d;
 }
 
 .rotate-hint {
