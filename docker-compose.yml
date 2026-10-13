@@ -1,0 +1,7 @@
+services:
+  web-controller:
+    build: .
+    container_name: web-controller
+    ports:
+      - "80:80"
+    restart: unless-stopped

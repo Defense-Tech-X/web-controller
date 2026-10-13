@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#16161a">
+  <title>Web Controller</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="controller">
+    <div class="stick" data-stick="left" data-hold-y data-initial-y="-1">
+      <div class="stick__knob"></div>
+    </div>
+
+    <section class="center-panel">
+      <button class="mode-toggle" type="button" role="switch" aria-checked="false" data-mode="angle">
+        <span class="mode-toggle__option" data-option="angle">Angle</span>
+        <span class="mode-toggle__option" data-option="acro">Acro</span>
+      </button>
+
+      <button class="fullscreen-toggle" type="button"></button>
+
+      <dl class="screen-info">
+        <dt>Экран</dt>
+        <dd id="screen-resolution"></dd>
+        <dt>Окно</dt>
+        <dd id="viewport-size"></dd>
+      </dl>
+    </section>
+
+    <div class="stick" data-stick="right">
+      <div class="stick__knob"></div>
+    </div>
+  </main>
+
+  <div class="rotate-hint">Поверните устройство горизонтально</div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
